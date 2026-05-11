@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoGear - Concept Realized</title>
+    <style>
+        /* 1. Reset: Removes browser default margins and padding */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. Body: Sets up the full-screen background */
+        body {
+            background-image: url('inwordred.png'); /* The red chaos background asset */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Important: prevents scrolling for clean layout */
+            position: relative; /* All containers inside will position relative to the body */
+        }
+
+        /* 3. Common Container Style: A base for our sections */
+        .positioned-container {
+            position: absolute;
+            z-index: 10; /* Put elements on a higher 'layer' than the background */
+        }
+
+        /* 4. Position the Header */
+        #header-container {
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* 5. Position the Menu Buttons */
+        #menu-container {
+            top: 50%; /* Center vertically... */
+            right: 20px; /* ...and position on the right with a small gap */
+            transform: translateY(-50%); /* ...perfectly vertically centered */
+        }
+
+        /* 6. Position the Footer */
+        #footer-container {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* 7. General Image Class: Forces assets to fill their containers */
+        .asset-img {
+            display: block;
+            width: 100%; /* Important: images fill their container width */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- This div holds your final structure, positioned precisely -->
+    <div id="header-container" class="positioned-container">
+        <!-- New asset needed: The silver top bar with gear and MAIN MENU text -->
+        <img src="top thing.png" alt="MonoGear Header" class="asset-img">
+    </div>
+
+    <div id="menu-container" class="positioned-container">
+        <!-- New asset needed: A single image containing the stacked red buttons -->
+        <img src="MonoGear.png" alt="Concept Menu Buttons" class="asset-img">
+    </div>
+
+    <div id="footer-container" class="positioned-container">
+        <!-- New asset needed: The metallic footer bar -->
+        <img src="bar.jpg" alt="MonoGear Footer" class="asset-img">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Project</title>
+    <link rel="stylesheet" href="Monogearwebsitecascade.css">
+</head>
+<body>
+    
+    <div class="topbar">
+        <img src="top thing.png" alt="the top barr" class="bar-bg">
+        <img src="mono_gear_logo.png" alt="MonoGear Logob" class="bar-logo">
+        <img src="MonoGear.png" alt="Mono gear promo image" class="menu-icon">
+        <h1>MAIN MENU</h1>
+    </div>
+
+    <div class="menu-container">
+        <img src="monobuttonsani/abouttoversionmono0012.png" id="menu-img" class="scroller" alt="Interactive 3D Menu">
+        <a href="version.html" id="active-link">
+            
+        </a>
+    </div>
+
+    <img src="bar.jpg" class="bottombar" alt="thanks ashton">
+
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <main>
+        <h2>About Me</h2>
+        <p>This is my first website created using HTML!!!!!</p>
+        <p>I like windows xp.</p>
+    </main>
+
+    <script>
+        const menuData = [
+            { 
+                url: "version.html", 
+                staticImg: "monobuttonsani/abouttoversionmono0012.png",
+                gifDown: "monobuttonsani/revversiontoaboutmono.gif",  
+                gifUp: "monobuttonsani/versiontomediamono.gif"     
+            },
+            { 
+                url: "about.html", 
+                staticImg: "monobuttonsani/abouttoversionmono0001.png",
+                gifDown: "monobuttonsani/revabouttosimulationmono.gif", 
+                gifUp: "monobuttonsani/aboutoversionmono.gif"      
+            },
+            { 
+                url: "simulations.html", 
+                staticImg: "monobuttonsani/simulationtocontactmono0001.png",
+                gifDown: "monobuttonsani/simulationstocontactmono.gif", 
+                gifUp: "monobuttonsani/simulationstoaboutmono.gif"      
+            },
+            { 
+                url: "contact.html", 
+                staticImg: "monobuttonsani/simulationtocontactmono0012.png",
+                gifDown: "monobuttonsani/contacttomediamono.gif",       
+                gifUp: "monobuttonsani/revcontacttosimulationsmono.gif" 
+            },
+            { 
+                url: "media.html", 
+                staticImg: "monobuttonsani/contacttomediamono0012.png", 
+                gifDown: "monobuttonsani/revmediatoversionmono.gif", 
+                gifUp: "monobuttonsani/revmediatocontactmono.gif" 
+            }
+        ];
+
+        let currentIndex = 0;
+        const imgElement = document.getElementById('menu-img');
+        const linkElement = document.getElementById('active-link');
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown') {
+                imgElement.src = menuData[currentIndex].gifDown;
+                currentIndex = (currentIndex + 1) % menuData.length;
+            } else if (e.key === 'ArrowUp') {
+                imgElement.src = menuData[currentIndex].gifUp;
+                currentIndex = (currentIndex - 1 + menuData.length) % menuData.length;
+            } else {
+                return;
+            }
+
+            linkElement.href = menuData[currentIndex].url;
+
+            setTimeout(() => {
+                imgElement.src = menuData[currentIndex].staticImg;
+            }, 600); 
+        });
+    </script>
+
+</body>
+</html>

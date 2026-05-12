@@ -69,10 +69,16 @@ header, main {
     padding-left: 40px;
 }
 
-.menu-icon {
+.menu-icon-link {
     height: 90%;
     width: auto;
     position: absolute;
+}
+
+.menu-icon {
+    height: 100%;
+    width: auto;
+    position: relative;
 }
 
 .topbar h1 {

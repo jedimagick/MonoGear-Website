@@ -133,8 +133,19 @@ header, main {
     justify-content: center;
 }
 
-.version  {
-width: 50%
+.VersionAnim  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100vw;       
+    height: 80%;      
+    overflow: hidden;  
+    z-index: 1000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .contactanim {

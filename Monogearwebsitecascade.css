@@ -177,3 +177,7 @@ header, main {
     align-items: center;
     justify-content: center;
 }
+
+.main p {
+    width: 500px;
+}

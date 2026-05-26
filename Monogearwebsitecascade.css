@@ -180,14 +180,14 @@ header, main {
 
 .About {
     position: absolute;
-    top: 100%;
+    top: 50%;
     transform: translateY(-50%);
     left: 0;
-    width: 100vw;       
+    width: auto;       
     height: 100%;      
     overflow: hidden;  
     z-index: 1000;
-    padding: 10px;
+    padding: 200px;
     display: flex;
     align-items: center;
     justify-content: center; 
